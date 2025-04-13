@@ -1,17 +1,15 @@
 // src/components/Hero.jsx
-export default function Hero() {
-    return (
-      <section className="bg-blue-50 min-h-[80vh] flex flex-col justify-center items-center text-center px-4">
-        <h1 className="text-4xl md:text-6xl font-bold text-blue-800 mb-4">
-          Welcome to Shahartakali High School
-        </h1>
-        <p className="text-lg md:text-xl text-gray-700 mb-6">
-          Empowering students with knowledge, values, and vision.
-        </p>
-        <a href="/login" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-          Get Started
-        </a>
-      </section>
-    );
-  }
-  
+export default function HeroSection({ title, description, cta, image }) {
+  return (
+    <section className="bg-white text-center p-8">
+      <img src="C:\Users\Shubham\Desktop\Projects\school-management-frontend\public\images\school-hero.jpg" 
+            alt="Hero" 
+            className="w-full h-96 object-cover rounded-lg shadow-md" />
+      <h1 className="text-4xl font-bold text-blue-800 mt-6">{title}</h1>
+      <p className="text-lg text-gray-600 my-4">{description}</p>
+      <a href={cta.link} className="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">
+        {cta.label}
+      </a>
+    </section>
+  );
+}
