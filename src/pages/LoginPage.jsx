@@ -56,6 +56,12 @@ export default function LoginPage() {
 
         {message && <p className="mt-4 text-center">{message}</p>}
       </form>
+      <p className="text-center mt-4">
+              Dont't have account Create one?{" "}
+      <a href="/register" className="text-blue-600 hover:text-blue-700">
+        Register here
+      </a>
+    </p>
     </div>
   );
 }
